@@ -1,0 +1,85 @@
+@use '../variables' as *;
+
+.header {
+    width: 100%;
+    background-color: $dark-cyan;
+    height: 157px;
+    background-image: url('/images/bg-header-desktop.svg');
+    position: relative;
+    margin-bottom: 3.866rem;
+
+    @media (max-width: 700px) {
+        background-image: url('/images/bg-header-mobile.svg');
+    }
+
+    .filter__by {
+        background-color: white;
+        min-width: 328px;
+        width: 80%;
+        max-width: 1111px;
+        min-height: 72px;
+        position: absolute;
+        bottom: -25%;
+        left: 50%;
+        box-shadow: $box-light;
+        border-radius: 5px;
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        transform: translateX(-50%);
+
+        .filter__items {
+            list-style: none;
+            display: flex;
+            width: 100%;
+            gap: 1rem;
+            flex-wrap: wrap;
+
+            .filter__item {
+                background-color: $filter-tablets;
+                display: flex;
+                align-items: center;
+                height: 32px;
+                padding-left: 8px;
+                border-radius: 5px;
+                overflow: hidden;
+                font-size: 1.1rem;
+                font-weight: 600;
+                color: $dark-cyan;
+
+                .clear__this {
+                    display: inline-block;
+                    height: 100% ;
+                    width: 32px;
+                    background-color: $dark-cyan;
+                    margin-left: 8px;
+                    background-image: url('/images/icon-remove.svg');
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    background-position: center;
+                    background-size: 40%;
+                    transition: background-color .4s ;
+
+                    &:hover {
+                        background-color: $Vdark-grayish-cyan;
+                    }
+                }
+            }
+        }
+
+        .clear__all {
+            border: none;
+            background-color: transparent;
+            cursor: pointer;
+            padding: .5rem;
+            font-size: 1rem;
+            font-weight: 600;
+            transition: color .1s ease-in;
+            &:hover {
+                color: $dark-cyan;
+                text-decoration: underline;
+            }
+        }
+    }
+
+}

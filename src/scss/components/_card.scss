@@ -1,0 +1,146 @@
+@use  '../variables' as v;
+
+.card {
+  margin-inline: auto;
+  max-width: 1111px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 33px 33px;
+  background-color: white;
+  border-left: 5px solid v.$dark-cyan;
+  border-radius: 5px;
+  margin-bottom: 24px;
+  box-shadow: v.$box-light;
+
+  &__info {
+    display: flex;
+    align-items: center;
+  }
+
+  &__logo {
+    width: 89px;
+    height: 89px;
+    margin-right: 24px;
+  }
+
+  &__details {
+    min-width: 200px;
+  }
+
+  &__top {
+    display: flex;
+    align-items: center;
+
+    &__company {
+      font-weight: 600;
+      font-size: 1.1rem;
+      margin-right: 1rem;
+      color: v.$dark-cyan;
+    }
+
+    &__pill {
+      text-transform: uppercase;
+      margin-right: 0.533333333rem;
+      font-size: 0.8333rem;
+      font-weight: 700;
+      background-color: v.$dark-cyan;
+      padding: 0.533333333rem;
+      border-radius: 55px;
+      color: white;
+      cursor: default;
+    }
+    &__featured {
+      background-color: v.$Vdark-grayish-cyan;
+    }
+  }
+
+  &__middle__title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-top: 0.8rem;
+    margin-bottom: 0.8rem;
+    cursor: pointer;
+    transition: color .300s ;
+    &:hover {
+      color: v.$dark-cyan;
+    }
+  }
+
+  &__bottom {
+    font-weight: 300;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .dot__spliter {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: red;
+  }
+
+  &__filter {
+    display: flex;
+    max-width: 100%;
+
+    flex-wrap: wrap;
+    gap: 17px;
+
+    .btn {
+      padding: 0.533333333rem;
+      border-radius: 4px;
+      border: none;
+      font-weight: 500;
+      background-color: v.$filter-tablets;
+      color: v.$dark-cyan;
+      cursor: pointer;
+      transition: color .3s, background-color .51s;
+
+      &:hover {
+        background-color: v.$dark-cyan;
+        color: v.$filter-tablets;
+      }
+    }
+  }
+}
+
+@media (max-width: 806px) {
+  .card {
+    flex-direction: column;
+    gap: 1rem;
+    min-width: 300px;
+    width: min(90%,400px);
+    position: relative;
+    align-items: flex-start;
+    margin-bottom: 5rem;
+    padding: 25px 25px;
+
+
+    &__logo {
+        display: block;
+        position: absolute;
+        top: 0%;
+        left: 20px;
+        transform: translateY(-50%);
+    }
+
+    &__info {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        margin-top: 2.5rem;
+
+      &::after {
+        content: "";
+        width: 90%;
+        height: 3px;
+        background-color: red;
+        display: block;
+        margin:1.6rem auto 1.06rem;
+        border-radius: 100px;
+      }
+    }
+  }
+}
