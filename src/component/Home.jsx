@@ -6,7 +6,7 @@ function Home({ filterAndSet, filter }) {
   const [net, setNet] = useState({isLoading: true, msg: 'Loading...'})
 
   useEffect(() => {
-    fetch('data/data.json').then(res => res.json()).then(d => {
+    fetch('https://api.jsonbin.io/b/6272a7e925069545a32d59e5').then(res => res.json()).then(s => s.data).then(d => {
         setNet({...net, isLoading: !net.isLoading})
         setData(d);
     }).catch(err => setNet({...net, msg: <p>Some thing went <span className="err__wrong">wrong</span> please try again after some time....</p>}))
