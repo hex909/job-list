@@ -39,3 +39,11 @@ Users should be able to:
 ## Author
 
 - Frontend Mentor - [@hex909](https://www.frontendmentor.io/profile/hex909)
+
+## How to run
+
+1. Clone this repo.
+
+2. Run `npm i`.
+
+3. Run `npm run dev`.
